@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{% include back_link.html %} 
+<div class = "title_block">
+<h1 class = "title">
+	{{ page.title }}
+</h1>
+{% if page.author %}
+	<div class = "author">
+		{{ page.author }}
+	</div>
+{% endif %}
+<div class = "date">{{ page.date | date: site.config_options.date_format }}</div>
+</div>
+
+{{ content }}

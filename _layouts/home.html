@@ -1,0 +1,73 @@
+---
+layout: default
+---
+<header>
+	<div class = "site_title">{{ site.title }}</div>
+	{% if site.config_options.show_description %}
+		<div class = "site_desc">{{ site.description }}</div>
+	{% endif %}
+</header>
+
+{% if paginator.total_pages > 1 %}
+<div class = "page_nav">
+	{% if paginator.previous_page %}
+		<a href = "{{ paginator.previous_page_path | prepend: site.baseurl }}" class = "prev_page">→</a>
+	{% else %}
+		<a href = "" class = "prev_page">•</a>
+	{% endif %}
+	<span>
+	{% if paginator.page > 1 %}
+		page {{ paginator.page }}.
+	{% else %}
+		archive.
+	{% endif %}
+	</span>
+	{% if paginator.next_page %}
+		<a href = "{{ paginator.next_page_path | prepend: site.baseurl }}" class = "next_page">←</a>
+	{% else %}
+		<a href = "" class = "next_page">•</a>
+	{% endif %}
+</div>
+
+{% else %}
+	<div class = "page_nav">
+		archive.
+	</div>
+{% endif %}
+
+{% for post in paginator.posts %}
+	{% include post-button.html %}
+{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+<div class = "page_nav2">
+	{% if paginator.previous_page %}
+		<a href = "{{ paginator.previous_page_path | prepend: site.baseurl }}" class = "prev_page">→</a>
+	{% else %}
+		<a href = "" class = "prev_page">•</a>
+	{% endif %}
+	<span>
+	{% if paginator.page > 1 %}
+		page {{ paginator.page }}.
+	{% else %}
+		& more to come soon.
+	{% endif %}
+	</span>
+	{% if paginator.next_page %}
+		<a href = "{{ paginator.next_page_path | prepend: site.baseurl }}" class = "next_page">←</a>
+	{% else %}
+		<a href = "" class = "next_page">•</a>
+	{% endif %}
+</div>
+
+{% else %}
+	<div class = "page_nav2">
+		& more to come soon.
+	</div>
+{% endif %}
+
+<hr>
+
+© 2021.
+
+

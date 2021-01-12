@@ -1,0 +1,32 @@
+
+title: marooning
+description: a minimalist theme focused on text and rich colors.
+url: ""
+
+exclude:
+- LICENSE
+- README.md
+- Gemfile
+- Gemfile.lock
+
+config_options: 
+        date_format_long: "%A, %B %d, %Y"
+        date_format_short: "%Y.%m.%d"
+
+        date_format: "%Y.%m.%d"
+        show_description: true
+
+collections:
+        posts:
+                output: true
+
+
+plugins:
+        - jekyll-seo-tag
+        - jekyll-sitemap
+        - jekyll-feed
+        - jekyll-paginate
+
+paginate_path: "/page:num/"
+
+paginate: 10
