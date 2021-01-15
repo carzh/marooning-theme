@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "marooning-theme"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.2"
   spec.authors       = ["carzh"]
   spec.email         = ["wolfivyaura@gmail.com"]
 
@@ -12,5 +12,5 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|license|readme|_config\.yml)!i) }
 
-  spec.add_runtime_dependency "jekyll", "~> 3.9"
+  spec.add_runtime_dependency "jekyll", "~> 4.0"
 end
