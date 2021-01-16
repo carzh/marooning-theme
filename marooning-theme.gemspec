@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "marooning-theme"
-  spec.version       = "0.1.2"
+  spec.version       = "0.1.3"
   spec.authors       = ["carzh"]
   spec.email         = ["wolfivyaura@gmail.com"]
 
