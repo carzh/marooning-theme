@@ -1,9 +1,5 @@
 ---
 ---
+$asset_url: '{{ "/assets" | absolute_url }}';
 
-$asset_url: '{{ '/assets' | absolute_url }}';
-
-@import
-	"variables",
-	"font",
-	"main";
+@import "marooning.scss";
